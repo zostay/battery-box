@@ -1,4 +1,4 @@
-# Customerizer Battery Box
+# Customizer Battery Box
 
 This is a project designed for the Customizer tool of Thingiverse. The idea
 being that I wanted a bunch of battery boxes that I could print for different
