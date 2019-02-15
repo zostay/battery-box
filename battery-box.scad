@@ -1,15 +1,35 @@
-type="cylinder"; // "bundle" OR "cylinder" OR "block"
+/* [Global] */
 
-bundle_width_count=4;
-bundle_length_count=1;
+// The type of battery to hold in the box
+type="cylinder"; // [bundle:Round Battery Bundle,cylinder:Round Battery,block:Sqaure Battery]
 
-battery_diameter=14;
+/* [Bundles] */
 
-battery_width=26;
-battery_length=17;
+// Number of batteries wide in each bundle
+bundle_width_count=4; // [2:100]
 
-battery_bundle_spacing=0;
-battery_clearance=0.3;
+// Number of batteries long in each bundle
+bundle_length_count=1; // [2:100]
+
+// Spacing between batteries in bundles in mm (usually 0)
+battery_bundle_spacing=0; // [0:10]
+
+/* [Round Battery] */
+
+// Battery diameter in mm
+battery_diameter=14; // [1:100]
+
+/* [Square Battery] */
+
+battery_width=26; // [1:100]
+battery_length=17; // [1:100]
+
+/* [Print Details] */
+
+// How much room to give batteries in the box in mm
+battery_clearance=0.3; // [0:0.05:1]
+
+/* [Hidden] */
 
 battery_diameter_w_clearance=battery_diameter+battery_clearance;
 
@@ -19,11 +39,21 @@ battery_length_w_clearance=battery_length+battery_clearance;
 bundle_width=bundle_width_count*battery_diameter+battery_bundle_spacing*(bundle_width_count-1)+battery_clearance*2;
 bundle_length=bundle_length_count*battery_diameter+battery_bundle_spacing*(bundle_length_count-1)+battery_clearance*2;
 
-battbox_count_wide=1;
-battbox_count_long=4;
+/* [Battery Box] */
 
-battbox_spacing=1;
-battbox_height=30;
+// Number of batteries or bundles wide
+battbox_count_wide=1; // [1:100]
+
+// Number of batteries or bundles long
+battbox_count_long=4; // [1:100]
+
+// Space between batteries in mm
+battbox_spacing=1; // [0:10]
+
+// Height of the battery box in mm
+battbox_height=30; // [10:100]
+
+/* [Hidden] */
 
 joint_height=battbox_height * 2/3;
 joint_diameter=3;
