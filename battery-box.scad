@@ -17,10 +17,27 @@ battery_bundle_spacing=0; // [0:10]
 /* [Round Battery] */
 
 // Battery diameter in mm
-battery_diameter=14; // [1:100]
+battery_type="AA"; // [AAAA,AAA,AA,C,D,Other]
+battery_other_diameter=14; // [1:100]
+
+/* [Hidden] */
+
+// AAAA = 8.3 mm
+// AAA = 10.5 mm
+// AA = 14 mm
+// C = 26.2 mm
+// D = 34 mm
+battery_diameter =
+      battery_type == "AAAA" ? 8.3
+    : battery_type == "AAA"  ? 10.5
+    : battery_type == "AA"   ? 14
+    : battery_type == "C"    ? 26.2
+    : battery_type == "D"    ? 34
+    :                          battery_other_diameter;
 
 /* [Square Battery] */
 
+// 9V = 26 mm x 17 mm
 battery_width=26; // [1:100]
 battery_length=17; // [1:100]
 
