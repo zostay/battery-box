@@ -9,15 +9,17 @@ type="cylinder"; // [bundle:Round Battery Bundle,cylinder:Round Battery,block:Sq
 bundle_width_count=4; // [2:100]
 
 // Number of batteries long in each bundle
-bundle_length_count=1; // [2:100]
+bundle_length_count=1; // [1:100]
 
 // Spacing between batteries in bundles in mm (usually 0)
 battery_bundle_spacing=0; // [0:10]
 
 /* [Round Battery] */
 
-// Battery diameter in mm
+// Use a standard battery diameters
 battery_type="AA"; // [AAAA,AAA,AA,C,D,Other]
+
+// Battery diameter in mm
 battery_other_diameter=14; // [1:100]
 
 /* [Hidden] */
