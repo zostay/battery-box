@@ -1,4 +1,4 @@
-/* [Global] */
+/* [Battery Box] */
 
 // The type of battery to hold in the box
 type="cylinder"; // [bundle:Round Battery Bundle,cylinder:Round Battery,block:Sqaure Battery]
